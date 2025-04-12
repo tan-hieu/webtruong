@@ -1,0 +1,453 @@
+/* Định dạng chung cho toàn bộ trang */
+body {
+  margin: 0; /* Loại bỏ khoảng cách mặc định của trình duyệt */
+  padding: 0; /* Loại bỏ khoảng cách mặc định của trình duyệt */
+  text-align: center; /* Căn giữa nội dung theo chiều ngang */
+  font-family: Arial, Helvetica, sans-serif; /* Đặt font chữ mặc định */
+}
+
+/* Định dạng liên kết */
+a {
+  text-decoration: none; /* Loại bỏ gạch chân mặc định */
+}
+
+/* Định dạng danh sách */
+ul li {
+  list-style-type: none; /* Loại bỏ ký hiệu đầu dòng */
+}
+
+/* Định dạng flexbox */
+.flex {
+  display: flex; /* Sử dụng flexbox để căn chỉnh */
+  justify-content: space-between; /* Căn đều các phần tử theo chiều ngang */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+/* Định dạng phần header */
+.pc-header {
+  position: fixed; /* Cố định header khi cuộn trang */
+  top: 0; /* Đặt header ở đầu trang */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Đặt header nằm trên các phần tử khác */
+  width: 100%; /* Chiếm toàn bộ chiều ngang */
+}
+
+.header-top {
+  display: flex; /* Sử dụng flexbox */
+  justify-content: space-between; /* Căn đều các phần tử */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 5px 15px; /* Khoảng cách bên trong */
+  background-color: rgb(7, 83, 224); /* Màu nền header */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); /* Hiệu ứng bóng đổ */
+}
+
+.header-right {
+  gap: 30px; /* Khoảng cách giữa các mục */
+}
+
+.header-right a {
+  display: block; /* Hiển thị dạng khối */
+  padding: 20px 20px; /* Khoảng cách bên trong */
+  color: white; /* Màu chữ */
+}
+
+.header-right a:hover {
+  background-color: #4da6ff; /* Màu nền khi hover */
+  color: white; /* Màu chữ khi hover */
+}
+
+.content {
+  width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Định dạng logo */
+.logo img {
+  width: 150px; /* Chiều rộng logo */
+  height: auto; /* Tự động điều chỉnh chiều cao */
+}
+
+/* Định dạng menu */
+.menu {
+  margin-right: 20px; /* Khoảng cách bên phải */
+  text-transform: uppercase; /* Viết hoa toàn bộ chữ */
+  font-size: 16px; /* Kích thước chữ */
+  position: relative; /* Định vị để menu con căn theo menu cha */
+}
+
+.menu-thongbao,
+.menu-gioithieu {
+  display: none;
+}
+
+.menu:hover .noidung {
+  display: block; /* Hiển thị menu con khi hover */
+}
+
+.menu a:hover {
+  color: rgb(12, 2, 2); /*đổi màu chữ thằng trang chủ đồ trong header*/
+}
+
+/* Định dạng phần menu con trong ul */
+.noidung {
+  display: none; /* Ẩn menu con mặc định */
+  top: 100%; /* Đặt menu con ngay dưới menu cha */
+  left: 0;
+  position: absolute; /* Định vị menu con */
+  background-color: white; /* Màu nền menu con */
+  border-radius: 5px; /* Bo tròn góc */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Hiệu ứng bóng đổ */
+  z-index: 1000; /* Đặt menu con nằm trên các phần tử khác */
+  width: 200px; /* Chiều rộng menu con */
+  padding: 0;
+}
+
+.danhsach {
+  padding: 0;
+  margin: 0;
+}
+
+.noidung li {
+  margin: 0;
+  padding: 0;
+}
+
+.noidung li:last-child {
+  border-bottom: none; /*loại bỏ viền cuối cùng*/
+}
+
+.noidung li a {
+  display: block; /* Hiển thị dạng khối */
+  color: black; /* Màu chữ */
+  text-decoration: none; /* Loại bỏ gạch chân */
+  transition: all 0.5s ease; /* Hiệu ứng chuyển đổi mượt */
+  text-align: center; /* Căn giữa chữ */
+  width: 80%;
+  height: 20px;
+}
+
+/* Đổi màu chữ thành trắng khi rê chuột vào các mục trong menu con */
+.noidung li a:hover {
+  color: white; /* Màu chữ khi hover */
+  background-color: #4da6ff; /* Màu nền khi hover */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt */
+}
+
+/* Định dạng ô tìm kiếm */
+.search {
+  display: flex; /* Sử dụng flexbox */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  border: 2x solid #ccc;
+  border-radius: 25px; /* Bo tròn góc */
+  padding: 5px 15px; /* Khoảng cách bên trong */
+  background-color: white; /* Màu nền */
+  width: fit-content; /* Kích thước vừa đủ */
+  transition: all 0.5s ease; /* Hiệu ứng mượt */
+}
+
+/* Ô tìm kiếm */
+.search input {
+  border: none; /* Loại bỏ viền */
+  outline: none; /* Loại bỏ viền khi focus */
+  font-size: 14px; /* Kích thước chữ */
+  padding: 5px 15px; /* Khoảng cách bên trong */
+  flex: 1; /* Chiếm tối đa không gian */
+}
+
+/* Nút search */
+.search a {
+  width: 35px; /* Kích thước nút tìm kiếm */
+  height: 35px;
+  background-color: rgb(7, 83, 224); /* Màu nền */
+  color: white; /* Màu biểu tượng */
+  border-radius: 50%; /* Bo tròn nút */
+  text-decoration: none; /* Loại bỏ gạch chân */
+  display: flex; /* Sử dụng flexbox */
+  align-items: center; /* Căn giữa biểu tượng */
+  justify-content: center; /* Căn giữa biểu tượng */
+  margin-left: 5px;
+  transition: all 0.5s ease;
+}
+
+/* Hiệu ứng cho nút search */
+.search a:hover {
+  background-color: #4da6ff; /* Màu nền khi hover */
+  color: black; /* Màu biểu tượng khi hover */
+}
+
+/* Phần main */
+/* Thẻ Fieldset */
+fieldset {
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+fieldset:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Phần làm chọn*/
+fieldset legend {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(to right, #0753e0, #4da6ff); /* Màu nền */
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+fieldset legend h2 {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+/* Cải thiện văn bản bên trong fieldset */
+fieldset p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+fieldset p strong {
+  color: #0753e0;
+  font-weight: 600;
+}
+
+/* Cải thiện danh sách bên trong fieldset */
+fieldset ul {
+  padding-left: 5px;
+  margin-bottom: 15px;
+}
+
+fieldset ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 28px;
+  list-style-type: none;
+}
+
+fieldset ul li:before {
+  content: "\e64c"; /* Themify checkmark icon */
+  font-family: "themify";
+  color: #0753e0;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Thêm phong cách cho phần cựu học sinh */
+.alumni-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.alumni-card {
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  padding: 15px;
+  flex: 1 1 calc(50% - 15px);
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.alumni-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.alumni-card h3 {
+  color: #0753e0;
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
+}
+
+.alumni-card p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Highlight box cho thông tin quan trọng */
+.highlight-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid #0753e0;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+}
+
+/* Thêm icon cho legend */
+.icon-edu:before {
+  content: "\e6b8"; /* education icon */
+  font-family: "themify";
+  margin-right: 10px;
+}
+
+.icon-book:before {
+  content: "\e72b"; /* book icon */
+  font-family: "themify";
+  margin-right: 10px;
+}
+
+.icon-method:before {
+  content: "\e717"; /* blackboard icon */
+  font-family: "themify";
+  margin-right: 10px;
+}
+
+.icon-career:before {
+  content: "\e691"; /* briefcase icon */
+  font-family: "themify";
+  margin-right: 10px;
+}
+
+.icon-facilities:before {
+  content: "\e639"; /* layout icon */
+  font-family: "themify";
+  margin-right: 10px;
+}
+
+.icon-activities:before {
+  content: "\e71e"; /* basketball icon */
+  font-family: "themify";
+  margin-right: 10px;
+}
+
+.icon-awards:before {
+  content: "\e64c"; /* cup icon */
+  font-family: "themify";
+  margin-right: 10px;
+}
+
+.icon-admission:before {
+  content: "\e61d"; /* pencil icon */
+  font-family: "themify";
+  margin-right: 10px;
+}
+
+.icon-support:before {
+  content: "\e69c"; /* heart icon */
+  font-family: "themify";
+  margin-right: 10px;
+}
+
+.icon-alumni:before {
+  content: "\e602"; /* user icon */
+  font-family: "themify";
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .alumni-card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Bố cục chính */
+.container {
+  margin-top: 115px !important;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+hr {
+  margin: 20px 0px;
+  border: none;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Định dạng phần chính */
+.main-content {
+  text-align: left; /* Căn trái nội dung */
+  width: 70%; /* Chiếm 70% chiều ngang */
+  background: #fff; /* Màu nền */
+  padding: 20px; /* Khoảng cách bên trong */
+}
+
+/* Định dạng phần sidebar */
+.sidebar {
+  text-align: left; /* Căn trái nội dung */
+  width: 30%; /* Chiếm 30% chiều ngang */
+  background: #fff; /* Màu nền */
+  padding: 20px; /* Khoảng cách bên trong */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+  border-radius: 8px; /* Bo tròn góc */
+}
+
+.sidebar p span {
+  font-size: 14px;
+}
+
+/* Ảnh và video */
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+video {
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Định dạng chân trang */
+footer {
+  background-color: #151b40; /* Màu nền */
+  padding: 20px 0; /* Khoảng cách bên trong */
+  text-align: center; /* Căn giữa nội dung */
+}
+
+.logo-footer img {
+  width: 50%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.footer-left .logo img {
+  width: 140%;
+  max-height: 60px; /* Điều chỉnh kích thước logo */
+}
+
+.footer-right {
+  text-align: left;
+  max-width: 600px;
+}
+
+.footer-right h3 {
+  color: #f0ad4e;
+}
+.footer-right p {
+  color: white; /*màu chữ*/
+}

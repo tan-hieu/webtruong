@@ -1,0 +1,342 @@
+/* Định dạng cột chính */
+.main-content {
+  width: 70%; /* Chiếm 70% chiều ngang */
+  margin: 0 auto; /* Căn giữa nội dung */
+  padding: 30px; /* Khoảng cách bên trong */
+  background: linear-gradient(145deg, #ffffff, #f1f1f1); /* Nền gradient đẹp */
+  border-radius: 12px; /* Bo tròn góc */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng mềm */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Font chữ hiện đại */
+  transition: all 0.3s ease; /* Hiệu ứng mượt mà khi hover */
+}
+
+.main-content:hover {
+  transform: translateY(-5px); /* Hiệu ứng nâng khi hover */
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1); /* Đổ bóng đậm hơn khi hover */
+}
+
+/* Định dạng tiêu đề */
+.main-content h2 {
+  font-size: 32px; /* Kích thước chữ */
+  color: #2c3e50; /* Màu chữ */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+  text-align: center; /* Căn giữa chữ */
+  font-weight: 700; /* Đậm chữ */
+  letter-spacing: 1px; /* Khoảng cách giữa các chữ */
+  text-transform: uppercase; /* Viết hoa tiêu đề */
+  border-bottom: 3px solid #4caf50; /* Đường viền dưới */
+  padding-bottom: 10px; /* Khoảng cách dưới */
+}
+
+/* Định dạng đoạn văn */
+.main-content p {
+  font-size: 17px; /* Kích thước chữ */
+  color: #555; /* Màu chữ */
+  line-height: 1.8; /* Khoảng cách dòng */
+  margin-bottom: 25px; /* Khoảng cách dưới */
+  text-align: justify; /* Căn đều nội dung */
+}
+
+/* Định dạng bảng */
+table {
+  width: 100%; /* Chiếm toàn bộ chiều ngang */
+  border-collapse: separate; /* Giữ khoảng cách giữa các ô */
+  border-spacing: 0 10px; /* Thêm khoảng cách giữa các dòng */
+  margin-top: 20px; /* Khoảng cách trên */
+  background-color: #f9f9f9; /* Màu nền bảng */
+  border-radius: 10px; /* Bo góc cho bảng */
+  overflow: hidden; /* Ẩn phần thừa khi bo góc */
+}
+
+/* Định dạng tiêu đề bảng */
+table thead {
+  background-color: #4caf50; /* Màu xanh lá cho tiêu đề bảng */
+  color: #fff; /* Màu chữ */
+  font-size: 18px; /* Kích thước chữ */
+  font-weight: bold; /* Đậm chữ */
+}
+
+/* Định dạng ô trong bảng */
+table th,
+table td {
+  padding: 15px; /* Khoảng cách bên trong */
+  text-align: center; /* Căn giữa nội dung */
+  font-size: 16px; /* Kích thước chữ */
+  border: none; /* Loại bỏ viền */
+}
+
+/* Định dạng hàng trong bảng */
+table tbody tr {
+  background-color: #f8f8f8; /* Màu nền mặc định */
+  transition: background-color 0.3s ease; /* Hiệu ứng mượt mà cho màu nền */
+}
+
+/* Định dạng hàng lẻ */
+table tbody tr:nth-child(odd) {
+  background-color: #fafafa; /* Màu nền cho dòng lẻ */
+}
+
+/* Hiệu ứng khi hover vào hàng */
+table tbody tr:hover {
+  background-color: #e9f9e3; /* Màu nền khi hover */
+  cursor: pointer; /* Con trỏ chuột dạng nút bấm */
+  transform: scale(1.02); /* Tăng kích thước nhẹ khi hover */
+}
+
+/* Định dạng tiêu đề bảng */
+table caption {
+  font-size: 20px; /* Kích thước chữ */
+  font-weight: 700; /* Đậm chữ */
+  color: #333; /* Màu chữ */
+  margin-bottom: 15px; /* Khoảng cách dưới */
+  text-align: left; /* Căn trái nội dung */
+  padding: 5px 0; /* Khoảng cách trên dưới */
+}
+
+/* Bộ lọc điểm */
+.score-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 16px;
+  color: #333;
+  width: 48%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Hộp tóm tắt điểm */
+.score-summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.score-box {
+  width: 31%;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.score-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.score-box h3 {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.score-value,
+.score-date {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.score-points {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Màu sắc các hộp */
+.best-score {
+  background-color: #e3f2fd;
+  border-left: 5px solid #2196f3;
+}
+
+.improved {
+  background-color: #e8f5e9;
+  border-left: 5px solid #4caf50;
+}
+
+.last-update {
+  background-color: #fff3e0;
+  border-left: 5px solid #ff9800;
+}
+
+/* Định dạng bảng */
+.score-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Định dạng tiêu đề bảng */
+.score-table caption {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: left;
+  padding: 5px 0;
+}
+
+/* Định dạng tiêu đề bảng */
+.score-table thead {
+  /* background-color: #4caf50; */
+  color: #fff;
+}
+
+/* Định dạng ô trong bảng */
+.score-table th,
+.score-table td {
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.score-table th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* Định dạng hàng trong bảng */
+.score-table tbody tr {
+  transition: all 0.3s;
+}
+
+/* Định dạng hàng lẻ */
+.score-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hiệu ứng khi hover vào hàng */
+.score-table tbody tr:hover {
+  background-color: #f1f8e9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Định dạng các lớp xếp hạng cao */
+.first-rank {
+  background-color: #fdf9c4 !important; /*màu vàng nhạt*/
+}
+
+.second-rank {
+  background-color: #f9f9f9 !important;
+}
+/*màu hồng*/
+.third-rank {
+  background-color: #ffe0cc !important;
+}
+
+/* Thay đổi xếp hạng */
+.change-up {
+  color: #4caf50;
+  font-weight: 700;
+}
+
+.change-down {
+  color: #f44336;
+  font-weight: 700;
+}
+
+.no-change {
+  color: #757575;
+}
+
+/* Giải thích tiêu chí */
+.score-explanation {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-top: 30px;
+}
+
+.score-explanation h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.score-explanation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.score-explanation li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 25px;
+}
+
+.score-explanation li:before {
+  content: "✓";
+  color: #4caf50;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+.score-note {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-left: 4px solid #2196f3;
+  border-radius: 4px;
+}
+
+.score-note p {
+  margin: 0;
+  font-size: 15px;
+  color: #555;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .main-content {
+    width: 90%;
+  }
+
+  .score-box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .filter-select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .score-table {
+    overflow-x: auto;
+    display: block;
+  }
+}

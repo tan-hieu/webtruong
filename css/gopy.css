@@ -1,0 +1,76 @@
+/* Định dạng phần chính của trang góp ý */
+.main-content {
+  background-color: #fff; /* Màu nền */
+  border-radius: 10px; /* Bo tròn góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+  padding: 30px; /* Khoảng cách bên trong */
+  max-width: 600px; /* Độ rộng tối đa */
+  margin: 0 auto; /* Căn giữa nội dung */
+  text-align: left; /* Căn trái nội dung */
+}
+
+/* Định dạng tiêu đề */
+.main-content h2 {
+  font-size: 24px; /* Kích thước chữ */
+  font-weight: bold; /* Đậm chữ */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+  color: #2c3e50; /* Màu chữ */
+}
+
+/* Định dạng đoạn văn */
+.main-content p {
+  font-size: 16px; /* Kích thước chữ */
+  line-height: 1.6; /* Khoảng cách dòng */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+  color: #555; /* Màu chữ */
+}
+
+/* Định dạng form góp ý */
+form label {
+  font-weight: bold; /* Đậm chữ */
+  margin-bottom: 5px; /* Khoảng cách dưới */
+  display: block; /* Hiển thị dạng khối */
+}
+
+form input,
+form textarea {
+  width: 100%; /* Chiếm toàn bộ chiều ngang */
+  padding: 10px; /* Khoảng cách bên trong */
+  margin-bottom: 15px; /* Khoảng cách dưới */
+  border: 1px solid #ccc; /* Viền */
+  border-radius: 5px; /* Bo tròn góc */
+  font-size: 14px; /* Kích thước chữ */
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff; /* Màu viền khi focus */
+  outline: none; /* Loại bỏ viền mặc định */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Hiệu ứng bóng đổ khi focus */
+}
+
+form button {
+  display: block; /* Hiển thị dạng khối*/
+  margin: auto; /*Chia đều trục x*/
+  background-color: #007bff; /* Màu nền */
+  color: white; /* Màu chữ */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border: none; /* Loại bỏ viền */
+  border-radius: 5px; /* Bo tròn góc */
+  font-size: 16px; /* Kích thước chữ */
+  cursor: pointer; /* Con trỏ chuột dạng nút bấm */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+form button:hover {
+  background-color: #0056b3; /* Màu nền khi hover */
+}
+
+/* Định dạng ghi chú */
+.note {
+  font-size: 14px; /* Kích thước chữ */
+  color: #666; /* Màu chữ */
+  font-style: italic; /* Chữ nghiêng */
+  margin-top: 20px; /* Khoảng cách trên */
+  text-align: center; /* Căn giữa nội dung */
+}
