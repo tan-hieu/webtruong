@@ -100,7 +100,7 @@ ul li {
   border-radius: 5px; /* Bo tròn góc */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Hiệu ứng bóng đổ */
   z-index: 1000; /* Đặt menu con nằm trên các phần tử khác */
-  width: 200px; /* Chiều rộng menu con */
+  width: 280px; /* Chiều rộng menu con */
   padding: 0;
 }
 
@@ -119,12 +119,13 @@ ul li {
 }
 
 .noidung li a {
+  white-space: nowrap; /* Ngăn văn bản xuống dòng */
   display: block; /* Hiển thị dạng khối */
   color: black; /* Màu chữ */
   text-decoration: none; /* Loại bỏ gạch chân */
   transition: all 0.5s ease; /* Hiệu ứng chuyển đổi mượt */
   text-align: left; /* Căn bên trái thẻ ul li */
-  width: 80%;
+  width: auto;
   height: 20px;
 }
 
