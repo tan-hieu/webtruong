@@ -100,6 +100,14 @@ table caption {
   margin-bottom: 25px;
   flex-wrap: wrap;
 }
+/* Đổi thứ tự dropdown - đưa Khối sang trái, Học kỳ sang phải */
+/* .score-filter select:nth-child(1) {
+  order: 2;
+}
+
+.score-filter select:nth-child(2) {
+  order: 1;
+} */
 
 .filter-select {
   padding: 12px 15px;
@@ -164,6 +172,7 @@ table caption {
 
 /* Màu sắc các hộp */
 .best-score {
+  /* order: 2;*/ /*Đổi hộp điểm qua phải*/
   background-color: #e3f2fd;
   border-left: 5px solid #2196f3;
 }
@@ -174,6 +183,9 @@ table caption {
 }
 
 .last-update {
+  /*2 dòng cmt là để đổi thằng nằm dưới qua phải*/
+  /* order: 3; */
+  /* margin-left: auto; */
   background-color: #fff3e0;
   border-left: 5px solid #ff9800;
 }

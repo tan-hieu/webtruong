@@ -383,6 +383,7 @@ hr {
 
 /* Định dạng phần chính */
 .main-content {
+  /* order: 2; */ /*Đổi qua trái*/
   text-align: left; /* Căn trái nội dung */
   width: 70%; /* Chiếm 70% chiều ngang */
   background: #fff; /* Màu nền */
@@ -391,6 +392,7 @@ hr {
 
 /* Định dạng phần sidebar */
 .sidebar {
+  /* order: 1; */ /*Đổi qua phải*/
   text-align: left; /* Căn trái nội dung */
   width: 30%; /* Chiếm 30% chiều ngang */
   background: #fff; /* Màu nền */
